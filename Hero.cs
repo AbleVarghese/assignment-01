@@ -41,17 +41,36 @@ public class Hero
 
     }
 
-public void fight()
-{
-    bool trueOrFalse;
-    int damage;
-
-    trueOrFalse=hitAttempt();
-
-    if(trueOrFalse==true)
+    public void fight()
     {
-        damage=hitDamage();
-        Console.WriteLine("Damage is:{0}",damage);
-        
+        bool trueOrFalse;
+        int damage;
+
+        trueOrFalse = hitAttempt();
+
+        if (trueOrFalse == true)
+        {
+            damage = hitDamage();
+            Console.WriteLine("Damage is:{0}", damage);
+
+        }
     }
+
+private bool hitAttempt()
+{
+    rndNum;
+    Random rndNum = new Random();
+    int hitAttempt = rndNum.Next(1, 100);
+
+    if (hitAttempt <= 20)
+
+        return true;
+    else
+        return false;
 }
+
+
+
+
+}
+
