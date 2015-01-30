@@ -2,17 +2,22 @@
 
 public class Class1
 {
-	public Class1()
-	{
-//Properties------------------------------------------------------
-        string name;
-        int strength;
-        int speed;
-        int health;
 
 
-// Methods--------------------------------------------------------
+    //Properties------------------------------------------------------
+    string name;
+    private int strength;
+    public int speed;
+    int health;
 
 
-	}
+    // Methods--------------------------------------------------------
+
+    void generateAbilities();
+    void fight();
+    bool hitAttempt();
+    int hitDamage();
+    void Show();
+
+
 }
