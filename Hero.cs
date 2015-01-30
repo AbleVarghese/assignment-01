@@ -1,23 +1,30 @@
 ﻿using System;
 
-public class Class1
+public class Hero
 {
 
+// Class Properties------------------------------------------------------
+ 
+ //Public class properties
+    public string name;
 
-    //Properties------------------------------------------------------
-    string name;
+ //Private class properties
     private int strength;
-    public int speed;
-    int health;
+    private int speed;
+    private int health;
 
 
-    // Methods--------------------------------------------------------
+// Methods--------------------------------------------------------
+   
+  //Public class methods
+    public void fight();
+    public void Show();
 
-    void generateAbilities();
-    void fight();
-    bool hitAttempt();
-    int hitDamage();
-    void Show();
+  //Private class methods
+    private void generateAbilities();
+    private bool hitAttempt();
+    private int hitDamage();
+    
 
 
 }
