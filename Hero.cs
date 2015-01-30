@@ -25,6 +25,11 @@ public class Hero
     private bool hitAttempt();
     private int hitDamage();
     
-
+public void Hero(string name)
+{ 
+    string name;
+    this.name = name;
+    generateAbilities();
+}
 
 }
