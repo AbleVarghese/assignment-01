@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment_01_Final
 {
@@ -10,7 +6,11 @@ namespace Assignment_01_Final
     {
         static void Main(string[] args)
         {
-//freferf 
+
+            Hero Object1 = new Hero();
+            Object1.show();
+            Object1.fight();
+            Console.WriteLine();
            
 
         }

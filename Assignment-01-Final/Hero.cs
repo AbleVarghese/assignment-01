@@ -15,25 +15,12 @@ namespace Assignment_01_Final
         private int speed;
         private int health;
 
-
-        // Methods--------------------------------------------------------
-
-        //Public class methods
-        public void fight();
-        public void Show();
-
-        //Private class methods
-        private void generateAbilities();
-        private bool hitAttempt();
-        private int hitDamage();
-
         // creating an object for the random class.
 
         Random rndNum = new Random();
 
-        public void Hero(string name)
+        public Hero(string name)
         {
-            string name;
             this.name = name;
             generateAbilities();
         }
@@ -74,7 +61,7 @@ namespace Assignment_01_Final
 
         private int hitDamage()
         {
-            damage = (this.strength * rndNum.Next(1, 7));
+            int damage = (this.strength * rndNum.Next(1, 7));
             return damage;
         }
 
