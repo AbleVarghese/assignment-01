@@ -41,5 +41,17 @@ public class Hero
 
     }
 
-    
+public void fight()
+{
+    bool trueOrFalse;
+    int damage;
+
+    trueOrFalse=hitAttempt();
+
+    if(trueOrFalse==true)
+    {
+        damage=hitDamage();
+        Console.WriteLine("Damage is:{0}",damage);
+        
+    }
 }
