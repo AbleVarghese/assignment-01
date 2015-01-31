@@ -50,7 +50,7 @@ namespace Assignment_01_Final
 
             }
             else
-                Console.WriteLine("\nOh ooo... Our hero {0} missed the hit this time..\n we should make him try again. \n", this.name);
+                Console.WriteLine("\nOh ooo... Our hero {0} missed the hit this time..\nWe should make him try again. \n", this.name);
 
         }
 
@@ -76,7 +76,7 @@ namespace Assignment_01_Final
         //This method outputs the name of the hero and his abilities
         public void show()
         {
-            Console.WriteLine("Our Hero's abilities are:\n\nStrength={0}\nSpeed={1}\nHealth={2}", this.strength, this.speed, this.health);
+            Console.WriteLine("{0}'s abilities are:\n\nStrength={1}\nSpeed={2}\nHealth={3}", this.name, this.strength, this.speed, this.health);
             Console.ReadKey();
         }
 
