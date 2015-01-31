@@ -5,7 +5,7 @@ namespace Assignment_01_Final
     public class Hero
     {
 
-        // Class Properties------------------------------------------------------
+     // CLASS PROPERTIES------------------------------------------------------
 
         //Public class properties
         public string name;
@@ -16,15 +16,17 @@ namespace Assignment_01_Final
         private int health;
 
         // creating an object for the random class.
-
         Random rndNum = new Random();
 
+     // CREATING A CONSTRUCTOR for the Hero Class that accepts name of the hero in the game 
         public Hero(string name)
         {
             this.name = name;
             generateAbilities();
         }
-
+    
+     //  METHODS  
+        // This method generates strength, speed and health for the hero
         private void generateAbilities()
         {
             this.strength = rndNum.Next(1, 101);
@@ -33,6 +35,7 @@ namespace Assignment_01_Final
 
         }
 
+        // This method prints the damage intensity made by the hero if the hit was made (means if the return value of the hitAttempt() is true)
         public void fight()
         {
             bool trueOrFalse;
@@ -43,14 +46,15 @@ namespace Assignment_01_Final
             if (trueOrFalse == true)
             {
                 damage = hitDamage();
-                Console.WriteLine("Damage is:{0}", damage);
+                Console.WriteLine("\nYeeha! Yeeeeha Yeeeeeha!!!.. this time our hero {0} hit the head off the villan!!!>. \nThe damage is:{1}\n", this.name, damage);
 
             }
-            else 
-            Console.WriteLine("The hero doesn't make a hit");
+            else
+                Console.WriteLine("\nOh ooo... Our hero {0} missed the hit this time..\n we should make him try again. \n", this.name);
 
         }
 
+        //This method evaluates whether a hit was made or not.
         private bool hitAttempt()
         {
 
@@ -62,15 +66,17 @@ namespace Assignment_01_Final
                 return false;
         }
 
+        //This method calculates the damage made by a hit (if the hit is made)
         private int hitDamage()
         {
             int damage = (this.strength * rndNum.Next(1, 7));
             return damage;
         }
 
+        //This method outputs the name of the hero and his abilities
         public void show()
         {
-            Console.WriteLine("Hero's ability Scores\n\nStrength={0}\nSpeed={1}\nHealth={2}", this.strength, this.speed, this.health);
+            Console.WriteLine("Our Hero's abilities are:\n\nStrength={0}\nSpeed={1}\nHealth={2}", this.strength, this.speed, this.health);
             Console.ReadKey();
         }
 
