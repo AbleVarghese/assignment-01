@@ -46,6 +46,9 @@ namespace Assignment_01_Final
                 Console.WriteLine("Damage is:{0}", damage);
 
             }
+            else 
+            Console.WriteLine("The hero doesn't make a hit");
+
         }
 
         private bool hitAttempt()
@@ -68,6 +71,7 @@ namespace Assignment_01_Final
         public void show()
         {
             Console.WriteLine("Hero's ability Scores\n\nStrength={0}\nSpeed={1}\nHealth={2}", this.strength, this.speed, this.health);
+            Console.ReadKey();
         }
 
     }
